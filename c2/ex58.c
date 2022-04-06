@@ -34,7 +34,7 @@ int main()
     printf("is_little_endian = %d\n", ret);
 
     int ret2 = is_little_endian2();
-    printf("is_little_endian = %d", ret2);
+    printf("is_little_endian2 = %d", ret2);
 
     return 0;
 }
