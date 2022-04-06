@@ -19,12 +19,12 @@ void show_int(int x)
 
 void show_float(float x)
 {
-    show_bytes((byte_pointer)&x, sizeof(int));
+    show_bytes((byte_pointer)&x, sizeof(float));
 }
 
 void show_point(void *x)
 {
-    show_bytes((byte_pointer)&x, sizeof(int));
+    show_bytes((byte_pointer)&x, sizeof(void *));
 }
 
 int main()
