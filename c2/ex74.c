@@ -19,11 +19,16 @@ int tsub_ok(int x, int y)
     int ny = ~y + 1;
     int add = add_ok(x, ny);
 
-    return add && (y != INT_MIN);
+    // 这里用了 >= 和 ==
+    // return add && !((y == INT_MIN) && (x >= 0));
+
+    return add && !(!(y ^ INT_MIN) && !(x & INT_MIN));
 }
 
 int main()
 {
+    // printf("%x", 0 - INT_MIN);
+    // printf("%x", -4 - INT_MIN);
     assert(!tsub_ok(0x00, INT_MIN));
     assert(tsub_ok(0x00, 0x00));
     return 0;
