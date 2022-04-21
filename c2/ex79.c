@@ -13,7 +13,8 @@
  */
 int mul3div4(int x)
 {
-  int64_t mul = x * 3;
+  // 溢出
+  int mul = x * 3;
   (mul & INT64_MIN) && (mul = mul + 3);
   return mul >> 2;
 }
