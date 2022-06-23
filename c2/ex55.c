@@ -34,5 +34,10 @@ int main()
     // 结果输出 01 00 00 00
     // 显然是小端序
     show_int(x);
+
+    int t1 = 0;
+    int t2 = 0;
+
+    printf("t1 addr = %x, t2 addr = %x\n", &t1, &t2);
     return 0;
 }

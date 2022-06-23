@@ -1,5 +1,10 @@
 ## 深入理解计算机系统第三版
 
+### PDF
+[中文扫描版 + 英文电子版](https://drive.google.com/drive/folders/1phttA1Kq-tAgDGY3i7MtkCNmjzden04m?usp=sharing)
+
+但是中文扫描版有错误，做习题的时候会发现和答案对不上，这个时候可以对照英文版看看
+
 ### 参考答案
 部分答案是根据下面的链接编写而成：
 
