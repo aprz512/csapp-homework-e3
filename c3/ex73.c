@@ -23,7 +23,7 @@ range_t find_range(float x)
 {
     __asm__(
         "vxorps %xmm1, %xmm1, %xmm1       # 将xmm1置为0 \n\t"
-        "vucomiss %xmm1, %xmm0            # 0 ：x  \n\t"
+        "vucomiss %xmm1, %xmm0            # x : 0  \n\t"
         "jp .P                            # x是NaN \n\t"
         "ja .A                            # 0 > x \n\t"
         "jb .B                            # 0 < x \n\t"
@@ -47,7 +47,8 @@ int main()
     /**
      * PF 在浮点数运算中，可以用来判断是否有 NaN。
      * 因为 jxx 不会改变标志位，所以可以连续使用。
-     * 我最开始的想法是根据x的二进制位特征来入手，因为书上根本没有讲到 PF。看来是课外有很多东西啊！
+     * 我最开始的想法是根据x的二进制位特征来入手
+     * 中文版书上第214页有PF标志的讲解
      * c 里面嵌套汇编可以参考 http://csapp.cs.cmu.edu/3e/waside/waside-embedded-asm.pdf
      */
     range_t n = NEG, z = ZERO, p = POS, o = OTHER;
